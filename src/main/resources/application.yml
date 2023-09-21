@@ -1,0 +1,57 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: admin-tiny
+  profiles:
+    active: dev
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    auto-mapping-behavior: partial
+    map-underscore-to-camel-case: true
+
+
+jwt:
+  tokenHeader: Authorization #JWT??????
+  secret: admin-secret #JWT????????
+  expiration: 604800 #JWT??????(60*60*24*7)
+  tokenHead: 'Bearer '  #JWT???????
+
+
+redis:
+  database: admin
+  key:
+    admin: 'ums:admin'
+    resourceList: 'ums:resourceList'
+  expire:
+    common: 86400 # 24??
+
+
+secure:
+  ignored:
+    urls: # ???????
+      - /swagger-ui/
+      - /swagger-resources/**
+      - /**/v2/api-docs
+      - /**/*.html
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /favicon.ico
+      - /actuator/**
+      - /druid/**
+      - /admin/login
+      - /admin/register
+      - /admin/info
+      - /admin/logout
