@@ -29,8 +29,8 @@ public class SwaggerConfig extends BaseSwaggerConfig {
   public SwaggerProperties swaggerProperties() {
     return SwaggerProperties.builder()
         .apiBasePackage("com.alvin.admin.tiny.modules")
-        .title("mall-tiny项目骨架")
-        .description("mall-tiny项目骨架相关接口文档")
+        .title("admin-tiny项目骨架")
+        .description("admin-tiny项目骨架相关接口文档")
         .contactName("alvin")
         .version("1.0")
         .enableSecurity(true)

@@ -145,7 +145,7 @@
 					<images>
 						<image>
 							<!--定义镜像名称-->
-							<name>mall-tiny/${project.name}:${project.version}</name>
+							<name>admin-tiny/${project.name}:${project.version}</name>
 							<!--定义镜像构建行为-->
 							<build>
 								<!--定义基础镜像-->
